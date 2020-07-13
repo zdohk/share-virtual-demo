@@ -1,0 +1,20 @@
+//*            STEP BY STEP SHARE SESSION
+//*--------------------------------------------------------------------
+//STEP1   EXEC PGM=SEND,PARM=CFP
+//*            Complete the CFP for SHARE
+//SYSIN     DD DSN=HLQ.TO.CFP,DISP=SHR
+//SYSOUT    DD MAILTO=CFP@SHARE.ORG
+//*--------------------------------------------------------------------
+//STEP2   EXEC PGM=RECV,PARM=CONFIRM
+//*            Wait for confirmation from SHARE
+//SYSIN     DD *
+mailbox=henri@zdevops.com
+inbody=your session has been accepted
+/*
+//*--------------------------------------------------------------------
+//STEP3   EXEC PGM=MAKE,PARM=SLIDES
+//*            Create awesome slide-deck with Lionel
+//SYSIN     DD DSN=REMOTE.SKYPE.SESSIONS,DISP=SHR
+//SYSOUT    DD PATH='/home/henri/presentations/share/boston2020.pptx'
+//*--------------------------------------------------------------------
+//STEP5   EXEC PGM=......
