@@ -17,4 +17,4 @@ inbody=your session has been accepted
 //SYSIN     DD DSN=REMOTE.SKYPE.SESSIONS,DISP=SHR
 //SYSOUT    DD PATH='/home/henri/presentations/share/boston2020.pptx'
 //*--------------------------------------------------------------------
-//STEP5   EXEC PGM=......
+//STEP5   EXEC PGM=DUNNO,COND=(0,EVEN)
